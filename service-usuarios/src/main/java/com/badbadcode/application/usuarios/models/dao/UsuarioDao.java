@@ -7,16 +7,10 @@ import org.springframework.data.rest.core.annotation.RestResource;
 
 import com.badbadcode.application.commons.usuarios.models.entity.Usuario;
 
-
-
-
-
-
-
 @RepositoryRestResource(path = "usuarios")
 public interface UsuarioDao extends PagingAndSortingRepository<Usuario, Long>{
 
 	@RestResource(path = "find")
-	public Usuario findByUsername(@Param("nombre") String username);
+	public Usuario findByUsername(@Param("username") String username);
 	
 }
